@@ -1,0 +1,22 @@
+
+// Teensy Pins
+#define ENCODER_PIN1 7
+#define ENCODER_PIN2 8
+#define ENCODER_BTN_PIN 9
+
+#define CLOCK_PIN 14
+#define RESET_PIN 15
+#define TRIGGER1_PIN 16
+#define TRIGGER2_PIN 17
+#define TRIGGER3_PIN 18
+#define TRIGGER4_PIN 19
+#define SWITCH1_PIN 2
+#define SWITCH2_PIN 3
+#define SWITCH3_PIN 4
+#define SWITCH4_PIN 5
+#define SWITCH5_PIN 6
+#define SWITCH6_PIN 7
+#define SWITCH7_PIN 8
+#define SWITCH8_PIN 9
+
+#define SERIAL_BAUD 115200
