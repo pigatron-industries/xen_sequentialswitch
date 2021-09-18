@@ -2,8 +2,6 @@
 #define Hardware_h
 
 #include <Arduino.h>
-#include <hardware/max11300/MAX11300.h>
-#include <hardware/max11300/MAX11300Pin.h>
 #include <eurorack.h>
 #include "hwconfig.h"
 
@@ -12,8 +10,10 @@ class Hardware {
         static Hardware hw;
         void init();
 
+        DigitalInput(ENCODER_BTN_PIN);
+
         RotaryEncoder encoder = RotaryEncoder(ENCODER_PIN1, ENCODER_PIN2);
-        PushButton<> encoderButton = PushButton<>(DigitalInputPin(ENCODER_BTN_PIN));
+        PushButton<> encoderButton = PushButton<>(DENCODER_BTN_PIN);
 
         TriggerInput resetInput = TriggerInput(RESET_PIN);
         TriggerInput clockInput = TriggerInput(CLOCK_PIN);
@@ -24,15 +24,24 @@ class Hardware {
             TriggerInput(TRIGGER4_PIN, true, false)
         };
 
-        DigitalOutputPin switches[8] = {
-            DigitalOutputPin(SWITCH1_PIN),
-            DigitalOutputPin(SWITCH2_PIN),
-            DigitalOutputPin(SWITCH3_PIN),
-            DigitalOutputPin(SWITCH4_PIN),
-            DigitalOutputPin(SWITCH5_PIN),
-            DigitalOutputPin(SWITCH6_PIN),
-            DigitalOutputPin(SWITCH7_PIN),
-            DigitalOutputPin(SWITCH8_PIN)
+        DigitalOutput(SWITCH1_PIN)
+        DigitalOutput(SWITCH2_PIN)
+        DigitalOutput(SWITCH3_PIN)
+        DigitalOutput(SWITCH4_PIN)
+        DigitalOutput(SWITCH5_PIN)
+        DigitalOutput(SWITCH6_PIN)
+        DigitalOutput(SWITCH7_PIN)
+        DigitalOutput(SWITCH8_PIN)
+
+        DigitalOutputPin<> switches[8] = {
+            DSWITCH1_PIN,
+            DSWITCH2_PIN,
+            DSWITCH3_PIN,
+            DSWITCH4_PIN,
+            DSWITCH5_PIN,
+            DSWITCH6_PIN,
+            DSWITCH7_PIN,
+            DSWITCH8_PIN
         };
 
 

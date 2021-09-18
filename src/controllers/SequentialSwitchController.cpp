@@ -3,14 +3,14 @@
 
 void SequentialSwitchController::init() {
     activeSwitch = 0;
-    Hardware::hw.switches[0].setValue(true);
-    Hardware::hw.switches[1].setValue(true);
-    Hardware::hw.switches[2].setValue(true);
-    Hardware::hw.switches[3].setValue(true);
-    Hardware::hw.switches[4].setValue(true);
-    Hardware::hw.switches[5].setValue(true);
-    Hardware::hw.switches[6].setValue(true);
-    Hardware::hw.switches[7].setValue(true);
+    Hardware::hw.switches[0].digitalWrite(true);
+    Hardware::hw.switches[1].digitalWrite(true);
+    Hardware::hw.switches[2].digitalWrite(true);
+    Hardware::hw.switches[3].digitalWrite(true);
+    Hardware::hw.switches[4].digitalWrite(true);
+    Hardware::hw.switches[5].digitalWrite(true);
+    Hardware::hw.switches[6].digitalWrite(true);
+    Hardware::hw.switches[7].digitalWrite(true);
 }
 
 void SequentialSwitchController::process() {
